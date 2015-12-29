@@ -1,0 +1,79 @@
+
+<head>
+<title></title>
+<script language="javascript" type="text/javascript" src="ChangeFont.js"></script>
+<script language="javascript" type="text/javascript">
+var size=12;
+var height=16;
+         function Button1_onclick() {
+            if (size>6) {
+                document.getElementById("div2").style.fontSize = (--size) +'pt';
+                document.getElementById("div2").style.lineHeight = (--height) +'pt'; 
+            }
+     }
+    function Button2_onclick(){
+        if(size<50){
+           document.getElementById("div2").style.fontSize=(++size)+'pt';
+           document.getElementById("div2").style.lineHeight=(++height)+'pt';
+        }
+     }
+    function Button3_onclick(){
+        var td0bject=document.getElementById("div2");
+        td0bject.innerHTML=ConverToSimplifideChinese(td0bject).innerHTML);
+     }
+    function Button4_onclick(){
+        var td0bject=document.getElementById("div2");
+        td0bject.innerHTML=ConverToTraditionalChinese(td0bject.innerHTML);
+    }
+    function ConvertToTraditionalChinese(s)
+{
+var str = '';
+for (var i = 0; i <s.length; i++) {
+if (jtFontString().indexOf(s.charAt(i)) != -1)
+str +=ftFontString().charAt(jtFontString().indexOf(s.charAt(i)));
+else
+str +=s.charAt(i);
+}
+return str;
+}
+function ConvertToSimplifiedChinese(s) {
+var str = '';
+for (var i = 0; i < s.length; i++) {
+if (ftFontString().indexOf(s.charAt(i)) != -1)
+str +=jtFontString().charAt(ftFontString().indexOf(s.charAt(i)));
+else
+str += s.charAt(i);
+}
+return str;
+
+</script>
+</head>
+
+
+
+<body>
+<div id="divl"align="right">
+     更改字体;
+      <input id="Buttonl" type="button"value="小"onclick="return Button1_onclick()"/>
+      <input id="Buttonl" type="button"value="大"onclick="return Button2_onclick()"/>
+      <input id="Buttonl" type="button"value="简体"onclick="return Button3_onclick()"/>
+      <input id="Buttonl" type="button"value="繁体"onclick="return Button4_onclick()"/>
+</div><br/>
+<div id="div2">
+      <center>互联网与现代教育</center>
+      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;山东师范大学坐落在历史文化名城济南。
+建校半个多世纪以来，学校植根齐鲁文化之沃土，汲取泉城人文之灵韵，与祖国共奋进，与时代同发展，
+谱写了以教书育人、创新发展为主旋律的华美篇章。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;学校分校本部、长清校区两个校区办学。
+校本部位于风景秀丽的千佛山脚下，环境优美，古朴典雅，学术底蕴丰厚；
+长清校区湖光山色，气势恢宏，现代气息浓郁。学校总占地面积近4000亩（约258.78万平方米），
+建筑面积120.66万平方米。教学科研仪器设备总值19748.46万元。有各类本科教学实验室78个。
+有省部共建教育部重点实验室1个，中央与地方共建高校基础实验室4个，国家级实验教学示范中心1个，
+山东省“十一五”重点实验室5个，山东省重点建设实验室5个，山东省高等学校实验教学示范中心6个。
+有校级实习实训基地330个。
+图书馆总建筑面积24870平方米，藏书330多万册。建有电子文献检索中心、高速宽带校园教育科研网。
+校园网光缆140千米，信息点30000个。建有多功能体育馆、田径场、足球场等各类现代化体育设施。
+学校附属中学、第二附属中学、附属小学都是山东省规范化学校或示范学校，
+已成为山东省基础教育的名牌学校。
+</div><br /><br />
+</body>
